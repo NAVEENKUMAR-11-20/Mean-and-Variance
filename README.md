@@ -48,10 +48,34 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
+```python
+import numpy as np 
+n = int(input("Enter number of observations: ")) 
+values = [] 
+for i in range(n): 
+    x = float(input(f"Enter value x{i+1}: ")) 
+    values.append(x) 
+ 
+probabilities = [] 
+for i in range(n): 
+    p = float(input(f"Enter probability p{i+1}: ")) 
+    probabilities.append(p) 
+values = np.array(values) 
+probabilities = np.array(probabilities) 
+mean = np.sum(values * probabilities) 
+ex2 = np.sum((values**2) * probabilities) 
+variance = ex2 - mean**2 
+std_dev = np.sqrt(variance) 
+print("The mean arrival rate is %.3f "%mean) 
+print("The variance of arrival from feeder is %.3f "%var) 
+print("The standard deviation of arrival from feeder is %.3F "%SD)
+```
 
 
 
 # Output : 
+<img width="694" height="456" alt="Screenshot 2026-04-18 111331" src="https://github.com/user-attachments/assets/899c4941-812c-4b34-ba96-64a0ed1e7100" />
+
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
